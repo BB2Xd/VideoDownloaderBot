@@ -287,8 +287,8 @@ async def choose_html_video_format(bot, query):
 
 @bot.on_message(
     (
-        (filters.command("download_html") & ~filters.group)
-        | filters.regex(f"^/download_html@{BOT}")
+        (filters.command("dd") & ~filters.group)
+        | filters.regex(f"^/dd@{BOT}")
     )
     & (filters.chat(sudo_html_groups) | filters.user(sudo_users))
     & (filters.document | filters.reply)
@@ -332,8 +332,8 @@ async def download_html(bot, msg):
 
 @bot.on_message(
     (
-        (filters.command("download_html") & ~filters.group)
-        | filters.regex(f"^/download_html@{BOT}")
+        (filters.command("dd") & ~filters.group)
+        | filters.regex(f"^/dd@{BOT}")
     )
     & (filters.chat(sudo_html_groups) | filters.user(sudo_users))
 )
@@ -506,8 +506,8 @@ async def choose_video_format(bot, query):
 
 @bot.on_message(
     (
-        (filters.command("download_link") & ~filters.group)
-        | filters.regex(f"^/download_link@{BOT}")
+        (filters.command("d") & ~filters.group)
+        | filters.regex(f"^/d@{BOT}")
     )
     & (filters.chat(sudo_groups) | filters.user(sudo_users))
 )
