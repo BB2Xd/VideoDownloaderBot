@@ -100,7 +100,7 @@ query_document = filters.create(query_document_filter_func)
 
 @bot.on_message(filters.command("start"))
 async def start(bot, message):
-    await message.reply("Send video link or html")
+    await message.reply("**Hey Bro! This is a Video Downloader Bot** \n\n __Accessed by Only By My Admins Not For Public__\n\n**Send Any Video link or html**")
 
 
 async def send_video(message, path, caption, quote, filename):
@@ -281,7 +281,7 @@ async def choose_html_video_format(bot, query):
     else:
         videos = videos[start_index - 1 :]
     n = len(videos)
-    await msg.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
+    await msg.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server \n\n||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
     await download_videos(msg, videos, start_index)
 
 
@@ -500,7 +500,7 @@ async def choose_video_format(bot, query):
     req_videos = commands[1:-1]
     videos = get_videos(req_videos, def_format)
     n = len(videos)
-    await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
+    await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server \n\n||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
     await download_videos(message, videos)
 
 
@@ -543,7 +543,7 @@ async def download_link(bot, message):
         req_videos = commands[1:]
         videos = get_videos(req_videos, def_format)
         n = len(videos)
-        await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
+        await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server \n\n||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
         await download_videos(message, videos)
 
 
