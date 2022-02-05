@@ -106,7 +106,7 @@ async def start(bot, message):
 async def send_video(message, path, caption, quote, filename):
     global thumb
 
-    reply = await message.reply("Uploading Video")
+    reply = await message.reply("**The Video is Successfully Downloaded to Our Server And Uploading To Telegram For Downloading.**")
 
     try:
         if thumb == "":
@@ -281,7 +281,7 @@ async def choose_html_video_format(bot, query):
     else:
         videos = videos[start_index - 1 :]
     n = len(videos)
-    await msg.reply(f"Downloading!!! {n} videos")
+    await msg.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
     await download_videos(msg, videos, start_index)
 
 
@@ -500,7 +500,7 @@ async def choose_video_format(bot, query):
     req_videos = commands[1:-1]
     videos = get_videos(req_videos, def_format)
     n = len(videos)
-    await message.reply(f"Downloading!!! {n} videos")
+    await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
     await download_videos(message, videos)
 
 
@@ -543,7 +543,7 @@ async def download_link(bot, message):
         req_videos = commands[1:]
         videos = get_videos(req_videos, def_format)
         n = len(videos)
-        await message.reply(f"Downloading!!! {n} videos")
+        await message.reply(f"**Hey Bro 👋 ! The Video is Currently Downloading To Our Server ||Please Wait||!** \n\n **No. of videos 🎥: {n}**")
         await download_videos(message, videos)
 
 
